@@ -19,9 +19,7 @@ public class Main {
         System.out.println("output delimiter: ");
         String outputDelimiter = scanner.next();
 
-        CSVParser parser = new CSVParser();
-        parser.setInputDelimiter(inputDelimiter);
-        parser.setOutputDelimiter(outputDelimiter);
+        CSVParser parser = new CSVParser(inputDelimiter, outputDelimiter);
         parser.parseFile(inputFilePath, outputFilePath);
     }
 }
