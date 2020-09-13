@@ -42,7 +42,7 @@ public class CSVParser {
 
         while (true) {
             // We reached last value in this line
-            if (!inputCopy.contains(",") && !inputCopy.contains("\"")) {
+            if (!hasMoreValues(inputCopy)) {
                 result.append(String.format("%d", inputCopy.length()));
                 break;
             }
@@ -65,6 +65,10 @@ public class CSVParser {
         }
 
         return result.toString();
+    }
+
+    private boolean hasMoreValues(String input) {
+        return input.contains(",") || input.charAt(0) == '"';
     }
 
     public String getInputDelimiter() {
