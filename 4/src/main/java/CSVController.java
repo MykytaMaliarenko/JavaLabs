@@ -32,9 +32,9 @@ public class CSVController {
             Thread thread = new Thread(worker);
             thread.start();
             workers.add(worker);
-
-            System.out.println("started all workers");
         }
+
+        System.out.println("started all workers");
 
         Thread output = new Thread(new OutputWorker(outputQueue, outputFilePath));
         output.start();

@@ -12,7 +12,7 @@ public class CSVParser {
         this.outputDelimiter = outputDelimiter;
     }
 
-    public  String parseString(String input) {
+    public String parseString(String input) {
         String inputCopy = input;
         StringBuilder result = new StringBuilder();
 
